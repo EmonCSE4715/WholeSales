@@ -27,7 +27,7 @@ setLoading(true)
       
     };
   
-      fetch(`http://localhost:5000/updateProduct/${product?._id}`, {
+      fetch(`https://wholesales.onrender.com/updateProduct/${product?._id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',

@@ -6,7 +6,7 @@ const ManageBuys = () => {
    const [products, setProducts] = useState([]);
 
    useEffect(() => {
-     fetch(`http://localhost:5000/buy`)
+     fetch(`https://wholesales.onrender.com/buy`)
        .then(res => res.json())
        .then(data => setProducts(data));
    }, [products]);
@@ -14,7 +14,7 @@ const ManageBuys = () => {
    const handleDelete = id => {
      const proceed = window.confirm('Are You Sure ?');
      if (proceed) {
-       const url = `http://localhost:5000/buy/${id}`;
+       const url = `https://wholesales.onrender.com/buy/${id}`;
        fetch(url, {
          method: 'DELETE',
        })

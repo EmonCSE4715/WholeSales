@@ -17,7 +17,7 @@
 //   const totalPrice = orderQuantity * product?.price ;
 
 //     useEffect(() => {
-//       fetch(`http://localhost:5000/product/${id}`)
+//       fetch(`https://wholesales.onrender.com/product/${id}`)
 //         .then(res => res.json())
 //         .then(data => {
 //           setProduct(data);
@@ -38,7 +38,7 @@
 //     date
      
 //     };
-//      fetch(`http://localhost:5000/buy`, {
+//      fetch(`https://wholesales.onrender.com/buy`, {
 //        method: 'POST',
 //        headers: {
 //          'content-type': 'application/json',
@@ -271,7 +271,7 @@ const BuyNow = () => {
 
   // Fetch product (fixed infinite loop issue)
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://wholesales.onrender.com/product/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data));
   }, [id]);
@@ -294,7 +294,7 @@ const BuyNow = () => {
       deliveryCharge,
     };
 
-    fetch(`http://localhost:5000/buy`, {
+    fetch(`https://wholesales.onrender.com/buy`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(buyProduct),

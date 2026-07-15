@@ -39,7 +39,7 @@ const Sales = () => {
       };
 
       // console.log('aci', updateUrl);
-      fetch(`http://localhost:5000/products`, {
+      fetch(`https://wholesales.onrender.com/products`, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

@@ -11,7 +11,7 @@ const Buys = () => {
 
   // Fetch products and categories
   useEffect(() => {
-    fetch(`http://localhost:5000/products`)
+    fetch(`https://wholesales.onrender.com/products`)
       .then(res => res.json())
       .then(data => {
         setProduct(data);

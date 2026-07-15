@@ -11,7 +11,7 @@ const useUser = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/user/${email}`)
+    fetch(`https://wholesales.onrender.com/user/${email}`)
       .then(res => res.json())
       .then(data => {
         setLoading(false);

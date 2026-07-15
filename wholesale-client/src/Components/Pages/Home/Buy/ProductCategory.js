@@ -8,7 +8,7 @@ const ProductCategory = ({ category }) => {
   const navigation=useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/productCategory/${category}`)
+    fetch(`https://wholesales.onrender.com/productCategory/${category}`)
       .then(res => res.json())
       .then(data => setProducts(data));
   }, [category]);

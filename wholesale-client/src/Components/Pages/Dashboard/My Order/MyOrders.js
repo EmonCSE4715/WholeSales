@@ -9,7 +9,7 @@ const MyOrders = () => {
    const [products, setProducts] = useState([]);
 
    useEffect(() => {
-     fetch(`http://localhost:5000/buyEmail/${users?.email}`)
+     fetch(`https://wholesales.onrender.com/buyEmail/${users?.email}`)
        .then(res => res.json())
        .then(data => setProducts(data));
    }, [products, users?.email]);
@@ -17,7 +17,7 @@ const MyOrders = () => {
    const handleDelete = id => {
      const proceed = window.confirm('Are You Sure ?');
      if (proceed) {
-       const url = `http://localhost:5000/buy/${id}`;
+       const url = `https://wholesales.onrender.com/buy/${id}`;
        fetch(url, {
          method: 'DELETE',
        })

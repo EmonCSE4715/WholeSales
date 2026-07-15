@@ -28,7 +28,7 @@ const Payment = () => {
   };
   const handleVCode = () => {
     const updatePayment = { payment: true };
-    fetch(`http://localhost:5000/buyPayment/${id}`, {
+    fetch(`https://wholesales.onrender.com/buyPayment/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

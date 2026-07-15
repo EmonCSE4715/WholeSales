@@ -10,7 +10,7 @@ const Contact = () => {
     reset,
   } = useForm();
   const onSubmit = data => {
-    fetch(`http://localhost:5000/contact`, {
+    fetch(`https://wholesales.onrender.com/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

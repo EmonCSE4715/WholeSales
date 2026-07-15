@@ -18,7 +18,7 @@ const Navbar = () => {
  
 
     useEffect(() => {
-      fetch(`http://localhost:5000/buyEmail/${user?.email}`)
+      fetch(`https://wholesales.onrender.com/buyEmail/${user?.email}`)
         .then(res => res.json())
         .then(data => setProducts(data));
     }, [products, user?.email]);

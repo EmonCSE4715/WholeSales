@@ -30,7 +30,7 @@ const CreateAccount = () => {
   }
 
   const createDBUser = (name, email,phone,address,tradeId) => {
-    fetch(`http://localhost:5000/create-user/${email}`, {
+    fetch(`https://wholesales.onrender.com/create-user/${email}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

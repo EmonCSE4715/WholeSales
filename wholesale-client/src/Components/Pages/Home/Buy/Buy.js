@@ -13,7 +13,7 @@ const Buy = ({ product = {}, handleBuy }) => {
   // Fetch reviews
   const fetchReviews = () => {
     if (!product?._id) return;
-    fetch(`http://localhost:5000/review/${product._id}`)
+    fetch(`https://wholesales.onrender.com/review/${product._id}`)
       .then(res => res.json())
       .then(data => setReviews(data))
       .catch(err => console.error(err));
@@ -35,7 +35,7 @@ const Buy = ({ product = {}, handleBuy }) => {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/review', {
+      const res = await fetch('https://wholesales.onrender.com/review', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newReview),
@@ -244,7 +244,7 @@ export default Buy;
 //   const [reviews, setReviews] = useState([]);
 
 //   useEffect(() => {
-//     fetch(`http://localhost:5000/review/${product?._id}`)
+//     fetch(`https://wholesales.onrender.com/review/${product?._id}`)
 //       .then(res => res.json())
 //       .then(data => setReviews(data));
 //   }, [product?._id]);
@@ -281,7 +281,7 @@ export default Buy;
 //   setShowReviewModal(false);
 
 //   // Send review to backend
-//   fetch(`http://localhost:5000/review`, {
+//   fetch(`https://wholesales.onrender.com/review`, {
 //     method: 'POST',
 //     headers: {
 //       'content-type': 'application/json',
